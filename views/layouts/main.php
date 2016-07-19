@@ -115,8 +115,8 @@ AppAsset::register($this);
                             Copyright &copy; Fancycode.pl <?= date('Y') ?> | 
                             <i>Email:</i> <a href="mailto:biuro@fancycode.pl?Subject=Zapytanie%20ze%20strony">biuro@fancycode.pl</a> |
                             <i>Tel:</i> (+48) 501 381 543 
-                             (Pon - Pt 9:00 - 17:00)
-                             
+                            (Pon - Pt 9:00 - 17:00)
+
                         </div>
                     </div>
                 </div>
@@ -130,6 +130,24 @@ AppAsset::register($this);
         <script src="/js/cbpAnimatedHeader.js"></script>
         <script src="/js/freelancer.js"></script>
         <script src="/js/pagination.js"></script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-11445195-3', 'auto');
+            ga('send', 'pageview');
+
+        </script>
 
     </body>
 </html>

@@ -1,0 +1,7 @@
+wget wget -qO- https://templated.co #download and redirect to stdout
+
+grep -oh /items/thumbnails/[a-z]*.jpg * >> links.txt # save thumb paths to file
+
+while read in; do echo `basename $in .jpg`; done >> names.txt < links.txt; #filter template names only
+
+while read in; do wget http://templated.co/items/thumbnails/$in; done < names.txt
