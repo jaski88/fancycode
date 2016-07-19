@@ -1,0 +1,26 @@
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule  ^.*$ index.php
+
+AddHandler application/x-httpd-php54 .php
+#RewriteCond %{HTTP_HOST} !^www.fancycode.pl [NC]
+#RewriteRule ^(.*)$ http://www.fancycode.pl%{REQUEST_URI} [R=301,L]
+
+
+#Options +FollowSymLinks
+#IndexIgnore */*
+#RewriteEngine on
+#
+## if request dosn't start with web add it
+#RewriteCond %{REQUEST_URI} !^/(web)
+#RewriteRule (.*) /web/$1
+#
+## if file or directory dosn't exists go to /web/index.php 
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /web/index.php 
